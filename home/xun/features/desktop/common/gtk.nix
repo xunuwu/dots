@@ -7,7 +7,7 @@ rec {
 	gtk = {
 		enable = true;
 		font = {
-			name = config.fontProfile.regular.family;
+			name = config.fontProfiles.regular.family;
 			size = 12;
 		};
 		theme = {

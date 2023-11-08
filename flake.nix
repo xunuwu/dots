@@ -54,10 +54,10 @@
 				specialArgs = { inherit inputs outputs; };
 			};
 			# dell server i have on my floor
-			xundell = lib.nixosSystem {
-				modules = [ ./hosts/xundell ];
-				specialArgs = { inherit inputs outputs; };
-			};
+			#xundell = lib.nixosSystem {
+			#	modules = [ ./hosts/xundell ];
+			#	specialArgs = { inherit inputs outputs; };
+			#};
 		};
 		
 		homeConfigurations = {
@@ -66,11 +66,11 @@
 				pkgs = pkgsFor.x86_64-linux;
 				extraSpecialArgs = { inherit inputs outputs; };
 			};
-			"xun@xundell" = lib.homeManagerConfiguration {
-				modules = [ ./home/xun/xundell.nix ];
-				pkgs = pkgsFor.x86_64-linux;
-				extraSpecialArgs = { inherit inputs outputs; };
-			};
+			#"xun@xundell" = lib.homeManagerConfiguration {
+			#	modules = [ ./home/xun/xundell.nix ];
+			#	pkgs = pkgsFor.x86_64-linux;
+			#	extraSpecialArgs = { inherit inputs outputs; };
+			#};
 			"xun@generic" = lib.homeManagerConfiguration {
 				modules = [ ./home/xun/generic.nix ];
 				pkgs = pkgsFor.x86_64-linux;

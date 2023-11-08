@@ -17,6 +17,7 @@
 		overlays = builtins.attrValues outputs.overlays;
 		config = {
 			allowUnfree = true;
+			allowUnfreePridicate = (_: true);
 		};
 	};
 

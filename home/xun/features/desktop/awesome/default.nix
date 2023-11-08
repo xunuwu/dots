@@ -6,7 +6,7 @@
 		../common
 	];
 	xdg.configFile."awesome/" = {
-		source = "./config";
+		source = ./config;
 		recursive = true;
 	};
 }

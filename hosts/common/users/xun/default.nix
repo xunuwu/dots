@@ -2,7 +2,8 @@
 let ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in
 {
-	users.mutableUsers = false;
+	# TODO add default passwords and stuff
+	users.mutableUsers = true; 
 	users.users.xun = {
 		isNormalUser = true;
 		shell = pkgs.zsh;
