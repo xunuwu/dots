@@ -9,6 +9,9 @@ in
 		viAlias = true;
 		vimAlias = true;
 		vimdiffAlias = true;
+		extraPackages = with pkgs; [
+			ripgrep
+		];
 	};
 
 	xdg.configFile."nvim/" = {
