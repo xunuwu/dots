@@ -1,7 +1,7 @@
 { pkgs, config, ...}:
 {
 	console = {
-		useXbkConfig = true;
+		useXkbConfig = true;
 		earlySetup = false;
 	};
 

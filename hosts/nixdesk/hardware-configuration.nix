@@ -24,5 +24,5 @@
 	}];
 
 	nixpkgs.hostPlatform.system = "x86_64-linux";
-	hadware.cpu.amd.updateMicrocode = true;
+	hardware.cpu.amd.updateMicrocode = true;
 }

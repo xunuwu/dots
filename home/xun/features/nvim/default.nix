@@ -3,11 +3,6 @@ let
 	color = pkgs.writeText "color.vim" (import ./theme.nix config.colorscheme);
 in
 {
-	imports = [
-		./lsp.nix
-		./ui.nix
-	];
-
 	programs.neovim = {
 		enable = true;
 		defaultEditor = true;

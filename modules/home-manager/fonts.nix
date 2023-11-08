@@ -1,4 +1,4 @@
-{ lib, config}:
+{ lib, config, ... }:
 
 let
 	mkFontOption = kind: {

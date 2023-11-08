@@ -7,7 +7,7 @@
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 		
 		hardware.url = "github:nixos/nixos-hardware";
-		nix-colors.url = "gihub:misterio77/nix-colors";
+		nix-colors.url = "github:misterio77/nix-colors";
 
 		sops-nix = {
 			url = "github:mic92/sops-nix";

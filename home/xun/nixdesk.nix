@@ -5,7 +5,7 @@
 		./features/nvim
 	];
 
-	colorscheme = inputs.nix-colors.colorschemes.oxocarbon-dark;
+	colorscheme = inputs.nix-colors.colorschemes.tokyo-night-terminal-dark;
 	
 	# |DP-3| |HDMI-1|
 
