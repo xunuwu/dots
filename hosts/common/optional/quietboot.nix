@@ -10,7 +10,11 @@
 			enable = true;
 			theme = "hexagon";
 			themePackages = [
-				pkgs.adi1090x-plymouth-themes
+				(pkgs.adi1090x-plymouth-themes.override {
+        	selected_themes = [
+          	"hexagon"
+        	];
+      	})
 			];
 		};
 		loader.timeout = 0;

@@ -1,7 +1,8 @@
 { inputs, outputs, ... }: {
 	imports = [
 		./global
-		./features/games
+		./features/desktop/awesome
+		./features/nvim
 	];
 
 	colorscheme = inputs.nix-colors.colorschemes.oxocarbon-dark;

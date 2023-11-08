@@ -1,0 +1,25 @@
+{
+    "workspace.library": [
+        "/home/xun/.config/nvim",
+        "/etc/xdg/nvim",
+        "/home/xun/.local/share/nvim/site",
+        "/home/xun/.local/share/nvim/site/pack/packer/start/chadtree",
+        "/home/xun/.local/share/nvim/site/pack/packer/start/coq_nvim",
+        "/home/xun/.local/share/nvim/site/pack/packer/start/everblush.vim",
+        "/home/xun/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+        "/home/xun/.local/share/nvim/site/pack/packer/start/neoformat",
+        "/home/xun/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+        "/home/xun/.local/share/nvim/site/pack/packer/start/nvim-navic",
+        "/home/xun/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+        "/home/xun/.local/share/nvim/site/pack/packer/start/packer.nvim",
+        "/home/xun/.local/share/nvim/site/pack/packer/start/vim-gas",
+        "/home/xun/.local/share/nvim/site/pack/packer/start/vim-surround",
+        "/home/xun/.local/share/nvim/site/pack/packer/start/yuck.vim",
+        "/usr/share/nvim/site",
+        "/usr/share/nvim/site/pack/packer/start/packer.nvim",
+        "/usr/share/nvim/runtime",
+        "/usr/lib/nvim",
+        "/usr/share/vim/vimfiles",
+        "${3rd}/luassert/library"
+    ]
+}

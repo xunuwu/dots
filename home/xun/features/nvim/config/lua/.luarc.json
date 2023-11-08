@@ -1,0 +1,21 @@
+{
+    "workspace.library": [
+        "/home/xun/.local/share/nvim/lazy/neodev.nvim/types/stable",
+        "/usr/share/nvim/runtime/lua",
+        "/home/xun/.local/share/nvim/lazy/lazy.nvim/lua",
+        "/home/xun/.local/share/nvim/lazy/which-key.nvim/lua",
+        "/home/xun/.local/share/nvim/lazy/nvim-lspconfig/lua",
+        "/home/xun/.local/share/nvim/lazy/nvim-dap-ui/lua",
+        "/home/xun/.local/share/nvim/lazy/nvim-treesitter/lua",
+        "/home/xun/.local/share/nvim/lazy/neoconf.nvim/lua",
+        "/home/xun/.local/share/nvim/lazy/mason-lspconfig.nvim/lua",
+        "/home/xun/.local/share/nvim/lazy/nvim-web-devicons/lua",
+        "/home/xun/.local/share/nvim/lazy/oxocarbon.nvim/lua",
+        "/home/xun/.local/share/nvim/lazy/mason.nvim/lua",
+        "/home/xun/.local/share/nvim/lazy/nvim-dap/lua",
+        "/home/xun/.local/share/nvim/lazy/nvim-tree.lua/lua",
+        "/home/xun/.local/share/nvim/lazy/neodev.nvim/lua",
+        "/home/xun/.config/nvim/lua",
+        "${3rd}/luv/library"
+    ]
+}

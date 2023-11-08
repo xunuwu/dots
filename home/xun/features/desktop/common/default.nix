@@ -8,5 +8,6 @@
 		./pavucontrol.nix
 		./playerctl.nix
 		./qt.nix
+		./wezterm.nix
 	];
 }
