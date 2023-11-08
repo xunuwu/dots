@@ -27,6 +27,7 @@
 
 	programs = {
 		adb.enable = true;
+		dconf.enable = true;
 	};
 
 	system.stateVersion = "23.11";
