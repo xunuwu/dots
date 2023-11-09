@@ -6,5 +6,7 @@
 
 	home.packages = with pkgs; [
 		bat
+		gitui
+		ripgrep
 	];
 }

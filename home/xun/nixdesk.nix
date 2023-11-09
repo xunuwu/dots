@@ -6,14 +6,14 @@
 		./features/cli
 	];
 
-	colorscheme = inputs.nix-colors.colorschemes.tokyo-night-terminal-dark;
+	colorscheme = inputs.nix-colors.colorschemes.darkviolet;
 	
 	# |DP-3| |HDMI-1|
 
 	monitors = [
 		{
 			name = "DP-3";
-			refreshrate = 165;
+			refreshRate = 165;
 			width = 1920;
 			height = 1080;
 			x = 0;

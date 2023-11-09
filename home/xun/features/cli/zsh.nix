@@ -1,6 +1,9 @@
 {
 	programs.zsh = {
+		enable = true;
 		autocd = true;
+		enableCompletion = true;
+		enableAutosuggestions = true;
 		oh-my-zsh = {
 			enable = true;
 			plugins = [

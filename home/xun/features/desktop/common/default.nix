@@ -3,10 +3,10 @@
 		./discord.nix
 		./firefox.nix
 		./font.nix
-		./gtk.nix
+		#./gtk.nix
 		./pavucontrol.nix
 		./playerctl.nix
-		./qt.nix
+		#./qt.nix
 		./wezterm.nix
 	];
 }

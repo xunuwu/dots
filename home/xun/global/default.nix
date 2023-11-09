@@ -38,6 +38,6 @@ in
 		sessionPath = [ "$HOME/.local/bin" ];
 	};
 
-	colorscheme = lib.mkDefault colorSchemes.catppuccin-mocha;
+	colorscheme = lib.mkDefault colorSchemes.darkviolet;
 	home.file.".colorscheme".text = config.colorscheme.slug;
 }
