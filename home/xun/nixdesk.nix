@@ -4,6 +4,7 @@
 		./features/desktop/awesome
 		./features/nvim
 		./features/cli
+		./features/games
 	];
 
 	colorscheme = inputs.nix-colors.colorschemes.darkviolet;

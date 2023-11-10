@@ -9,11 +9,6 @@
 		hardware.url = "github:nixos/nixos-hardware";
 		nix-colors.url = "github:misterio77/nix-colors";
 
-		sops-nix = {
-			url = "github:mic92/sops-nix";
-			inputs.nixpkgs.follows = "nixpkgs";
-			inputs.nixpkgs-table.follows = "nixpkgs";
-		};
 		home-manager = {
 			url = "github:nix-community/home-manager";
 		};
