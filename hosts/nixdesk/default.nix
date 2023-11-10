@@ -13,6 +13,7 @@
 		../common/optional/quietboot.nix
 		../common/optional/systemd-boot.nix
 		../common/optional/awesome.nix
+		../common/optional/qmk.nix
 	];
 
 	networking = {
