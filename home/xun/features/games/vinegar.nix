@@ -1,12 +1,15 @@
 { pkgs, ...}:
-
+let 
+	vinegar = pkgs.vinegar.override {
+		wine = pkgs.inputs.nix-gaming.wine-ge;
+	};
+in
 {
-	home.packages = with pkgs; [
+	home.packages = [
 		vinegar
 	];
 	xdg.configFile."vinegar/config.toml".text = ''
-
-multiple_instances = true
+#multiple_instances = true
 
 [player]
 renderer = "D3D11"
