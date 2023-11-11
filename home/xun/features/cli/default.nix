@@ -6,6 +6,7 @@
 
 	home.packages = with pkgs; [
 		bat
+		gh
 		gitui
 		tmux
 		fzf

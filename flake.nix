@@ -48,6 +48,10 @@
 				modules = [ ./hosts/nixdesk ];
 				specialArgs = { inherit inputs outputs; };
 			};
+			hopper = lib.nixosSystem {
+				modules = [ ./hosts/hopper ];
+				specialArgs = { inherit inputs outputs; };
+			};
 		};
 		
 		homeConfigurations = {
@@ -56,11 +60,11 @@
 				pkgs = pkgsFor.x86_64-linux;
 				extraSpecialArgs = { inherit inputs outputs; };
 			};
-			#"xun@generic" = lib.homeManagerConfiguration {
-			#	modules = [ ./home/xun/generic.nix ];
-			#	pkgs = pkgsFor.x86_64-linux;
-			#	extraSpecialArgs = { inherit inputs outputs; };
-			#};
+			"xun@hopper" = lib.homeManagerConfiguration {
+				modules = [ ./home/xun/hopper.nix ];
+				pkgs = pkgsFor.x86_64-linux;
+				extraSpecialArgs = { inherit inputs outputs; };
+			};
 		};
 	};
 }
