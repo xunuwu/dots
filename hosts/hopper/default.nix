@@ -3,7 +3,7 @@
 		inputs.hardware.nixosModules.common-cpu-intel
 		inputs.hardware.nixosModules.common-pc-hdd
 
-		./hardware-configuration
+		./hardware-configuration.nix
 
 		../common/global
 		../common/users/xun
