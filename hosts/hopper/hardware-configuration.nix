@@ -1,7 +1,7 @@
 {
   boot = {
     initrd.availableKernelModules = [ "ehci_pci" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
-    kernelModules = [ "kvm-intel" ];
+    kernelModules = [ ];
     loader.timeout = 5;
   };
 
@@ -11,22 +11,22 @@
       fsType = "btrfs";
       options = [ "subvol=root" ];
     };
-    "home" = {
+    "/home" = {
       device = "/dev/disk/by-uuid/1297e638-f2ff-49a2-a362-314ac7eeaabc";
       fsType = "btrfs";
       options = [ "subvol=home" ];
     };
-    "nix" = {
+    "/nix" = {
       device = "/dev/disk/by-uuid/1297e638-f2ff-49a2-a362-314ac7eeaabc";
       fsType = "btrfs";
       options = [ "subvol=nix" ];
     };
+    "/boot" = {
+      device = "/dev/disk/by-uuid/8D4C-2F05";
+      fsType = "vfat";
+    };
   };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/8D4C-2F05";
-    fsType = "vfat";
-  };
 
   swapDevices = [ ];
 
