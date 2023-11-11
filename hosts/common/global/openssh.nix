@@ -10,7 +10,7 @@ in
 		enable = true;
 		settings = {
 			# Harden
-			PasswordAuthentication = false;
+			PasswordAuthentication = true;
 			PermitRootLogin = "no";
 			# Automatically remove stale sockets
 			StreamLocalBindUnlink = "yes";

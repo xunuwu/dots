@@ -8,6 +8,7 @@
 				ublock-origin
 				darkreader
 				sponsorblock
+				tridactyl
 			];
 			bookmarks = { };
 			settings = {

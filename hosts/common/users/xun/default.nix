@@ -1,8 +1,10 @@
-{ pkgs, config, ...}:
-let ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
+{ pkgs, config, lib, ...}:
+let
+	ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in
 {
 	# TODO add default passwords and stuff
+	
 	users.mutableUsers = true; 
 	users.users.xun = {
 		isNormalUser = true;

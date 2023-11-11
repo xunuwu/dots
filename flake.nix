@@ -19,8 +19,6 @@
 		};
 
 		nix-gaming.url = "github:fufexan/nix-gaming";
-		
-		# other inputs go here later :))
 	};
 
 	outputs = { self, nixpkgs, home-manager, ... } @inputs:
@@ -50,11 +48,6 @@
 				modules = [ ./hosts/nixdesk ];
 				specialArgs = { inherit inputs outputs; };
 			};
-			# dell server i have on my floor
-			#xundell = lib.nixosSystem {
-			#	modules = [ ./hosts/xundell ];
-			#	specialArgs = { inherit inputs outputs; };
-			#};
 		};
 		
 		homeConfigurations = {
@@ -63,16 +56,11 @@
 				pkgs = pkgsFor.x86_64-linux;
 				extraSpecialArgs = { inherit inputs outputs; };
 			};
-			#"xun@xundell" = lib.homeManagerConfiguration {
-			#	modules = [ ./home/xun/xundell.nix ];
+			#"xun@generic" = lib.homeManagerConfiguration {
+			#	modules = [ ./home/xun/generic.nix ];
 			#	pkgs = pkgsFor.x86_64-linux;
 			#	extraSpecialArgs = { inherit inputs outputs; };
 			#};
-			"xun@generic" = lib.homeManagerConfiguration {
-				modules = [ ./home/xun/generic.nix ];
-				pkgs = pkgsFor.x86_64-linux;
-				extraSpecialArgs = { inherit inputs outputs; };
-			};
 		};
 	};
 }

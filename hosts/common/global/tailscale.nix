@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, config,... }:
 {
 	services.tailscale = {
 		enable = true;
@@ -6,6 +6,7 @@
 	};
 	networking.firewall = {
 		checkReversePath = "loose";
-		allowedUDPPorts = [ 41641 ];
+		allowedUDPPorts = [ config.services.tailscale.port ];
+		allowedTCPPorts = [ 22 ]; # allow ssh through tailscale
 	};
 }

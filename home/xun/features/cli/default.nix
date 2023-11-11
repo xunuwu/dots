@@ -7,6 +7,8 @@
 	home.packages = with pkgs; [
 		bat
 		gitui
+		tmux
+		fzf
 		ripgrep
 	];
 }

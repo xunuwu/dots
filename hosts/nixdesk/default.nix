@@ -16,6 +16,8 @@
 		../common/optional/qmk.nix
 	];
 
+	services.xserver.displayManager.autoLogin.user = "xun";
+
 	networking = {
 		hostName = "nixdesk";
 		useDHCP = true;

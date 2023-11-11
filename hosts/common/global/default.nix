@@ -4,10 +4,10 @@
 		./fish.nix
 		./locale.nix
 		./nix.nix
-		#./openssh.nix
+		./openssh.nix
 		./steam-hardware.nix
 		./systemd-initrd.nix
-		#./tailscale.nix
+		./tailscale.nix
 		./zsh.nix
 	] ++ (builtins.attrValues outputs.nixosModules);
 
