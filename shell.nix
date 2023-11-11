@@ -1,26 +1,24 @@
-{ 
-	pkgs ?
-		let
-			lock = (builtins.fromJSON (builtins.readFile ./flake.lock)).nodes.nixpkgs.locked;
-			nixpkgs = fetchTarball {
-				url = "https://github.com/nixos/nixpkgs/archive/${lock.rev}.tar.gz";
-				sha256 = lock.narHash;
-			};
-		in
-		import nixpkgs { overlays = [ ]; }
-	, ...
+{ pkgs ? let
+    lock = (builtins.fromJSON (builtins.readFile ./flake.lock)).nodes.nixpkgs.locked;
+    nixpkgs = fetchTarball {
+      url = "https://github.com/nixos/nixpkgs/archive/${lock.rev}.tar.gz";
+      sha256 = lock.narHash;
+    };
+  in
+  import nixpkgs { overlays = [ ]; }
+, ...
 }: {
-	default = pkgs.mkShell {
-		NIX_CONFIG = "extra-experimental-features = nix-command flakes nix-repl";
-		nativeBuildInputs = with pkgs; [
-			nix
-			home-manager
-			git
+  default = pkgs.mkShell {
+    NIX_CONFIG = "extra-experimental-features = nix-command flakes nix-repl";
+    nativeBuildInputs = with pkgs; [
+      nix
+      home-manager
+      git
 
-			sops
-			ssh-to-age
-			gnupg
-			age
-		];
-	};
+      sops
+      ssh-to-age
+      gnupg
+      age
+    ];
+  };
 }

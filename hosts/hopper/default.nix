@@ -1,22 +1,22 @@
 { pkgs, inputs, ... }: {
-	imports = [
-		inputs.hardware.nixosModules.common-cpu-intel
-		inputs.hardware.nixosModules.common-pc-hdd
+  imports = [
+    inputs.hardware.nixosModules.common-cpu-intel
+    inputs.hardware.nixosModules.common-pc-hdd
 
-		./hardware-configuration.nix
+    ./hardware-configuration.nix
 
-		../common/global
-		../common/users/xun
+    ../common/global
+    ../common/users/xun
 
-		../common/optional/systemd-boot.nix
-	];
+    ../common/optional/systemd-boot.nix
+  ];
 
-	networking = {
-		hostName = "hopper";
-		useDHCP = true;
-	};
+  networking = {
+    hostName = "hopper";
+    useDHCP = true;
+  };
 
-	programs.dconf.enable = true;
+  programs.dconf.enable = true;
 
-	system.stateVersion = "23.11";
+  system.stateVersion = "23.11";
 }

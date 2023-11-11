@@ -1,10 +1,11 @@
 { config, pkgs, lib, ... }:
 
 let
-	inherit (config.colorscheme) colors;
-in {
-	home.packages = with pkgs; [
-		discord-rpc
-		discord
-	];
+  inherit (config.colorscheme) colors;
+in
+{
+  home.packages = with pkgs; [
+    discord-rpc
+    discord
+  ];
 }

@@ -1,15 +1,15 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 {
-	imports = [
-		./zsh.nix
-	];
+  imports = [
+    ./zsh.nix
+  ];
 
-	home.packages = with pkgs; [
-		bat
-		gh
-		gitui
-		tmux
-		fzf
-		ripgrep
-	];
+  home.packages = with pkgs; [
+    bat
+    gh
+    gitui
+    tmux
+    fzf
+    ripgrep
+  ];
 }
