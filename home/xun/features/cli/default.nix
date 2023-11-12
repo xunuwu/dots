@@ -10,6 +10,9 @@
     gitui
     tmux
     fzf
+    htop
+    btop
+    nvtop
     ripgrep
   ];
 }
