@@ -7,7 +7,6 @@
     ./openssh.nix
     ./steam-hardware.nix
     ./systemd-initrd.nix
-    ./tailscale.nix
     ./zsh.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 

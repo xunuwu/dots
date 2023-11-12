@@ -14,6 +14,7 @@
     ../common/optional/systemd-boot.nix
     ../common/optional/awesome.nix
     ../common/optional/qmk.nix
+    ../common/optional/tailscale.nix
   ];
 
   services.xserver.displayManager.autoLogin.user = "xun";
