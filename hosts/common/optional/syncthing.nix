@@ -3,6 +3,10 @@
   services.syncthing = {
     enable = true;
     openDefaultPorts = true;
+    user = "xun";
+    group = "users";
+    dataDir = "/home/xun/.local/share/syncthing";
+    configDir = "/home/xun/.config/syncthing";
 
     overrideDevices = true;
     settings.devices = {
