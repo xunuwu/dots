@@ -12,7 +12,6 @@
     fzf
     htop
     btop
-    nvtop
     ripgrep
   ];
 }
