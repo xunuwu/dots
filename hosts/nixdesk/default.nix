@@ -15,6 +15,7 @@
     ../common/optional/awesome.nix
     ../common/optional/qmk.nix
     ../common/optional/tailscale.nix
+    ../common/optional/syncthing.nix
   ];
 
   services.xserver.displayManager.autoLogin.user = "xun";

@@ -7,6 +7,5 @@
   networking.firewall = {
     checkReversePath = "loose";
     allowedUDPPorts = [ config.services.tailscale.port ];
-    #allowedTCPPorts = [ 22 ]; # allow ssh through tailscale
   };
 }

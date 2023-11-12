@@ -10,6 +10,7 @@
 
     ../common/optional/systemd-boot.nix
     ../common/optional/tailscale.nix
+    ../common/optional/syncthing.nix
   ];
 
   networking = {
