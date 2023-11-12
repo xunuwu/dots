@@ -3,10 +3,8 @@
   services.syncthing = {
     enable = true;
     openDefaultPorts = true;
-    overrideDevices = true;
-    overrideFolders = true;
-    group = "users";
 
+    overrideDevices = true;
     settings.devices = {
       "nixdesk" = {
         id = "2WCEQPF-2J4U7IK-XRT25FV-NFT2JEM-AVOMDEK-FIJNZ24-7WCBZC2-57CX2AP";
@@ -24,21 +22,6 @@
         addresses = [ "tcp://192.168.50.97:51820" "tcp://hopper:51820"];
       };
     };
-
-    settings.folders = {
-      "secrets" = {
-        id = "gpfyz-eiwmj";
-        path = "~/secrets";
-        devices = [ "nixdesk" "redmi-note-10-pro" "hopper" ];
-        fsWatcherEnabled = "true";
-        fsWatcherDelayS = "60";
-        versioning = {
-          type = "simple";
-          params.keep = "15"; # old version count to keep
-        };
-      };
-    };
-
 
     settings.options.urAccepted = -1; # disable usage reporting
     settings.options.globalAnnounceEnabled = false; # only sync on LAN
