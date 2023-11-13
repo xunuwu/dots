@@ -263,8 +263,8 @@ globalkeys = gears.table.join(
 	-- multimedia keys
 	awful.key({}, "XF86AudioMute", function() awful.spawn('wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle') end),
 	awful.key({ modkey }, "XF86AudioMute", function() awful.spawn('wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle') end),
-	awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn('wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+') end),
-	awful.key({}, "XF86AudioLowerVolume", function() awful.spawn('wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-') end),
+	awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn('wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 3%+') end),
+	awful.key({}, "XF86AudioLowerVolume", function() awful.spawn('wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 3%-') end),
 	--mpris (playerctl)
 	awful.key({}, "XF86AudioPlay", function() awful.spawn('playerctl play-pause') end),
 	awful.key({}, "XF86AudioStop", function() awful.spawn('playerctl stop') end),
