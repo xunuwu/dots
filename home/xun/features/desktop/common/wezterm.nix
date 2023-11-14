@@ -15,7 +15,7 @@ in
       			c = wezterm.config_builder()
       		end
       		c.hide_tab_bar_if_only_one_tab = true
-      		c.color_scheme = "${if (colorscheme.slug == "darkviolet") then "Dark Violet (base16)" else colorscheme.slug}"
+          c.color_scheme = "rose-pine"
       		c.window_padding = { left = 10, right = 10, top = 5, bottom = 5 }
       		c.window_decorations = 'RESIZE'
       		c.window_close_confirmation = "NeverPrompt"
