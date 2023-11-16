@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   imports = [
     ./cursor.nix
     ./discord.nix
@@ -10,5 +10,8 @@
     ./playerctl.nix
     #./qt.nix
     ./wezterm.nix
+  ];
+  home.packages = with pkgs; [
+    mpv
   ];
 }
