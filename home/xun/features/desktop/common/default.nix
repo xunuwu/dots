@@ -1,5 +1,6 @@
 {
   imports = [
+    ./cursor.nix
     ./discord.nix
     ./firefox.nix
     ./font.nix
