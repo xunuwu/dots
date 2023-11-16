@@ -1,22 +1,28 @@
-{ inputs, outputs, ... }: {
-  imports = [
-    inputs.home-manager.nixosModules.home-manager
-    ./fish.nix
-    ./locale.nix
-    ./nix.nix
-    ./openssh.nix
-    ./steam-hardware.nix
-    ./systemd-initrd.nix
-    ./zsh.nix
-  ] ++ (builtins.attrValues outputs.nixosModules);
+{
+  inputs,
+  outputs,
+  ...
+}: {
+  imports =
+    [
+      inputs.home-manager.nixosModules.home-manager
+      ./fish.nix
+      ./locale.nix
+      ./nix.nix
+      ./openssh.nix
+      ./steam-hardware.nix
+      ./systemd-initrd.nix
+      ./zsh.nix
+    ]
+    ++ (builtins.attrValues outputs.nixosModules);
 
-  home-manager.extraSpecialArgs = { inherit inputs outputs; };
+  home-manager.extraSpecialArgs = {inherit inputs outputs;};
 
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
     config = {
       allowUnfree = true;
-      allowUnfreePridicate = (_: true);
+      allowUnfreePredicate = _: true;
     };
   };
 

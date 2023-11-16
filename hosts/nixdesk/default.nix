@@ -1,10 +1,15 @@
-{ pkgs, inputs, ... }: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     inputs.hardware.nixosModules.common-cpu-amd
     inputs.hardware.nixosModules.common-gpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
 
     ./hardware-configuration.nix
+    ./services
 
     ../common/global
     ../common/users/xun
@@ -16,6 +21,7 @@
     ../common/optional/qmk.nix
     ../common/optional/tailscale.nix
     ../common/optional/syncthing.nix
+    ../common/optional/virtualization.nix
   ];
 
   services.xserver.displayManager.autoLogin.user = "xun";
@@ -27,7 +33,7 @@
 
   boot = {
     kernelPackages = pkgs.linuxKernel.packages.linux_zen;
-    binfmt.emulatedSystems = [ "aarch64-linux" "i686-linux" ];
+    binfmt.emulatedSystems = ["aarch64-linux" "i686-linux"];
   };
 
   programs = {
