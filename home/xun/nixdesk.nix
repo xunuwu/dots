@@ -1,10 +1,15 @@
-{ inputs, outputs, ... }: {
+{
+  inputs,
+  outputs,
+  ...
+}: {
   imports = [
     ./global
     ./features/desktop/awesome
     ./features/nvim
     ./features/cli
     ./features/games
+    ./features/virtualization/virt-manager.nix
   ];
 
   colorscheme = inputs.nix-colors.colorschemes.darkviolet;

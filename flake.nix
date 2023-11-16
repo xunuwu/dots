@@ -49,7 +49,7 @@
 
     packages = forEachSystem (pkgs: import ./pkgs {inherit pkgs;});
     devShells = forEachSystem (pkgs: import ./shell.nix {inherit pkgs;});
-    formatter = forEachSystem (pkgs: pkgs.nixpkgs-fmt);
+    formatter = forEachSystem (pkgs: pkgs.alejandra);
 
     nixosConfigurations = {
       # desktop
