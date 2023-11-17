@@ -1,4 +1,4 @@
-{ lib, ... }: {
+{lib, ...}: {
   i18n = {
     defaultLocale = lib.mkDefault "en_GB.UTF-8";
     extraLocaleSettings = {
@@ -13,5 +13,6 @@
       LC_TIME = lib.mkDefault "sv_SE.UTF-8";
     };
   };
+  services.xserver.layout = "eu";
   time.timeZone = lib.mkDefault "Europe/Stockholm";
 }
