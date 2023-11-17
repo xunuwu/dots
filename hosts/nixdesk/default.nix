@@ -19,6 +19,7 @@
     ../common/optional/systemd-boot.nix
     ../common/optional/awesome.nix
     ../common/optional/qmk.nix
+    ../common/optional/steam.nix
     ../common/optional/tailscale.nix
     ../common/optional/syncthing.nix
     ../common/optional/virtualization.nix
