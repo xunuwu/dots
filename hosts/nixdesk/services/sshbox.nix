@@ -21,6 +21,7 @@
       };
 
       environment.systemPackages = with pkgs; [
+        nano
         htop
         btop
         busybox
@@ -31,11 +32,16 @@
         tmux
       ];
 
-      users.users.user = {
+      users.users.eksi = {
         isNormalUser = true;
         initialPassword = "password123";
         packages = [
           inputs.neovim.packages.${pkgs.system}.neovim
+
+          pkgs.python3
+          pkgs.clang
+          pkgs.lua
+          pkgs.nethack
         ];
       };
     };
