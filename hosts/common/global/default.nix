@@ -10,7 +10,6 @@
       ./locale.nix
       ./nix.nix
       ./openssh.nix
-      ./steam-hardware.nix
       ./systemd-initrd.nix
       ./zsh.nix
     ]

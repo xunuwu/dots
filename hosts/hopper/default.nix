@@ -1,4 +1,8 @@
-{ pkgs, inputs, ... }: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     inputs.hardware.nixosModules.common-cpu-intel
     inputs.hardware.nixosModules.common-pc-hdd
@@ -9,6 +13,7 @@
     ../common/users/xun
 
     ../common/optional/systemd-boot.nix
+    ../common/optional/steam.nix
     ../common/optional/awesome.nix
     ../common/optional/tailscale.nix
     ../common/optional/syncthing.nix

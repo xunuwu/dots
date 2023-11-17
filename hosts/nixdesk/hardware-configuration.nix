@@ -1,9 +1,9 @@
-{
+{pkgs, ...}: {
   boot = {
     initrd = {
-      availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
+      availableKernelModules = ["nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod"];
     };
-    kernelModules = [ "kvm-amd" ];
+    kernelModules = ["kvm-amd" "amdgpu"];
     loader.efi.efiSysMountPoint = "/boot";
   };
 
@@ -18,11 +18,13 @@
     };
   };
 
-  swapDevices = [{
-    device = "/var/lib/swapfile";
-    randomEncryption.enable = true;
-    size = 16 * 1024;
-  }];
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      randomEncryption.enable = true;
+      size = 16 * 1024;
+    }
+  ];
 
   nixpkgs.hostPlatform.system = "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = true;
