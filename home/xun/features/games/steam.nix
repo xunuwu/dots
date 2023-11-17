@@ -39,6 +39,7 @@ in {
     gamescope
     mangohud
     gamemode
+    steam-run
     protontricks
   ];
 }
