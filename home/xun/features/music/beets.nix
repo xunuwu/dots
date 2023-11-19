@@ -8,7 +8,7 @@
     enable = true;
     settings = {
       directory = config.services.mpd.musicDirectory;
-      library = config.xdg.dataHome + "/library.db";
+      library = config.xdg.dataHome + "/beets/library.db";
       import.move = true;
       threaded = true;
       plugins = [
@@ -24,7 +24,7 @@
       };
     };
     mpdIntegration = {
-      enableStats = true;
+      #enableStats = true; # dosent work for some reason, TODO maybe fix this
       enableUpdate = true;
     };
   };
