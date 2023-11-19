@@ -1,0 +1,31 @@
+{
+  config,
+  pkgs,
+  ...
+}: {
+  home.packages = with pkgs; [ffmpeg];
+  programs.beets = {
+    enable = true;
+    settings = {
+      directory = config.services.mpd.musicDirectory;
+      library = config.xdg.dataHome + "/library.db";
+      import.move = true;
+      threaded = true;
+      plugins = [
+        "unimported"
+        "missing"
+        "info"
+        "replaygain"
+        "lyrics"
+      ];
+      replaygain = {
+        auto = true;
+        backend = "ffmpeg";
+      };
+    };
+    mpdIntegration = {
+      enableStats = true;
+      enableUpdate = true;
+    };
+  };
+}

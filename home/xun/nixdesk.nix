@@ -8,6 +8,7 @@
     ./features/desktop/awesome
     ./features/nvim
     ./features/cli
+    ./features/music
     ./features/games
     ./features/virtualization/virt-manager.nix
   ];
