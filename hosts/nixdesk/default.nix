@@ -32,6 +32,12 @@
     useDHCP = true;
   };
 
+  networking.firewall = {
+    # Goldberg steam emulator
+    allowedTCPPorts = [47584];
+    allowedUDPPorts = [47584];
+  };
+
   boot = {
     kernelPackages = pkgs.linuxKernel.packages.linux_zen;
     binfmt.emulatedSystems = ["aarch64-linux" "i686-linux"];
