@@ -10,6 +10,7 @@
     lf
     gh
     gitui
+    killall
     fzf
     htop
     btop
