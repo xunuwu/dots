@@ -1,11 +1,15 @@
-{ config, pkgs, lib, ... }:
-
-let
-  inherit (config.colorscheme) colors;
-in
 {
-  home.packages = with pkgs; [
-    discord-rpc
-    discord
+  config,
+  pkgs,
+  lib,
+  ...
+}: let
+  vencord = pkgs.discord.override {
+    withVencord = true;
+  };
+in {
+  home.packages = [
+    pkgs.discord-rpc
+    vencord
   ];
 }
