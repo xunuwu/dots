@@ -4,8 +4,6 @@
     ./yams.nix
     ./ncmpcpp.nix
     ./beets.nix
-  ];
-  home.packages = with pkgs; [
-    spotify
+    ./spotify.nix
   ];
 }

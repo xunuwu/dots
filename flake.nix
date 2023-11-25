@@ -21,7 +21,7 @@
       url = "github:xunuwu/neovim-config";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    spicetify-nix.url = "github:the-argus/spicetify-nix";
     nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
