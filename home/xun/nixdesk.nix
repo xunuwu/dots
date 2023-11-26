@@ -7,6 +7,7 @@
     ./global
     ./features/desktop/awesome
     ./features/nvim
+    ./features/emacs
     ./features/cli
     ./features/music
     ./features/games

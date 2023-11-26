@@ -23,6 +23,7 @@
     };
     spicetify-nix.url = "github:the-argus/spicetify-nix";
     nix-gaming.url = "github:fufexan/nix-gaming";
+    emacs-overlay.url = "github:nix-community/emacs-overlay";
   };
 
   outputs = {
