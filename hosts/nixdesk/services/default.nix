@@ -1,5 +1,6 @@
 {
   imports = [
     ./sshbox.nix
+    ./vfio
   ];
 }

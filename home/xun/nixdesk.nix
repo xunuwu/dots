@@ -11,7 +11,7 @@
     ./features/cli
     ./features/music
     ./features/games
-    ./features/virtualization/virt-manager.nix
+    #./features/virtualization/virt-manager.nix
   ];
 
   colorscheme = inputs.nix-colors.colorschemes.darkviolet;
