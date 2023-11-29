@@ -8,7 +8,7 @@
 in {
   # TODO add default passwords and stuff
 
-  users.mutableUsers = true;
+  users.mutableUsers = false;
   users.users.xun = {
     isNormalUser = true;
     shell = pkgs.zsh;
@@ -23,7 +23,14 @@ in {
         "git"
         "libvirtd"
       ];
+
+    hashedPasswordFile = config.sops.secrets.xun-password.path;
     packages = [pkgs.home-manager];
+  };
+
+  sops.secrets.xun-password = {
+    sopsFile = ../../secrets.yaml;
+    neededForUsers = true;
   };
 
   home-manager.users.xun = import ../../../../home/xun/${config.networking.hostName}.nix;

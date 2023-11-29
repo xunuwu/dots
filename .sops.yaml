@@ -1,0 +1,19 @@
+keys:
+  - &users:
+    - &xun 677D2B8020AD4C9546D3CCC04C66B16CFD37FACD
+  - &hosts:
+    - &nixdesk age155sscpw0x36t6s9usdrz7relpxqrtqnk98mrc7s0qcv2n0v3zd7sfl2xn8
+
+creation_rules:
+  - path_regex: hosts/nixdesk/secrets.ya?ml$
+    key_groups:
+    - age:
+      - *nixdesk
+      pgp:
+      - *xun
+  - path_regex: hosts/common/secrets.ya?ml$
+    key_groups:
+    - age:
+      - *nixdesk
+      pgp:
+      - *xun
