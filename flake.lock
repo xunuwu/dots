@@ -171,11 +171,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1699993417,
-        "narHash": "sha256-g2ezI30jmWXZJvCCi/3lXUiqt5pAP6x/ZW+0eE5FG+w=",
+        "lastModified": 1701809544,
+        "narHash": "sha256-s19sK9usGCYFVM8oy0BAJ0T7rzOyc3/VN8Pinv5ongc=",
         "owner": "xunuwu",
         "repo": "neovim-config",
-        "rev": "e2ae5ae3fdb430e246eadd57b7c18bdc801a8a3c",
+        "rev": "55edf99ea585b6f224974df66b76b8ec50805f08",
         "type": "github"
       },
       "original": {
