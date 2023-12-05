@@ -10,7 +10,7 @@ creation_rules:
       - age:
         - *nixdesk
         - *xun
-  - path_regex: hosts/nixdesk/secrets.ya?ml$
+  - path_regex: hosts/nixdesk/*
     key_groups:
     - age:
       - *nixdesk
