@@ -3,14 +3,9 @@
   pkgs,
   lib,
   ...
-}: let
-  inherit (config) colorscheme;
-  inherit (colorscheme) colors;
-  l = lib;
-in {
+}: {
   programs.wezterm = {
     enable = true;
-
     extraConfig = ''
       local wezterm = require'wezterm'
       local c = {}
@@ -18,7 +13,7 @@ in {
         c = wezterm.config_builder()
       end
       c.hide_tab_bar_if_only_one_tab = true
-      c.color_scheme = "catppuccin-mocha"
+      c.color_scheme = "GitHub Dark"
       c.window_padding = { left = 10, right = 10, top = 5, bottom = 5 }
       c.window_decorations = 'RESIZE'
       c.window_close_confirmation = "NeverPrompt"
