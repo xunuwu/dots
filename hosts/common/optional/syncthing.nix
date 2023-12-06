@@ -1,5 +1,8 @@
-{ config, lib, ... }:
 {
+  config,
+  lib,
+  ...
+}: {
   services.syncthing = {
     enable = true;
     openDefaultPorts = true;
@@ -25,7 +28,6 @@
     };
 
     settings.options.urAccepted = -1; # disable usage reporting
-    settings.options.globalAnnounceEnabled = false; # only sync on LAN
     settings.gui.insecureSkipHostcheck = true;
     settings.gui.insecureAdminAccess = true;
   };

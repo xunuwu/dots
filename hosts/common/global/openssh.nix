@@ -1,16 +1,18 @@
-{ outputs, lib, config, ... }:
-
-let
+{
+  outputs,
+  lib,
+  config,
+  ...
+}: let
   inherit (config.networking) hostName;
   hosts = outputs.nixosConfigurations;
   #pubKey = host: ../../${host}/ssh_host_ed25519_key.pub;
-in
-{
+in {
   services.openssh = {
     enable = true;
     settings = {
       # Harden
-      PasswordAuthentication = true;
+      PasswordAuthentication = false;
       PermitRootLogin = "no";
       # Automatically remove stale sockets
       StreamLocalBindUnlink = "yes";
@@ -18,10 +20,12 @@ in
       GatewayPorts = "clientspecified";
     };
 
-    hostKeys = [{
-      path = "/etc/ssh/ssh_host_ed25519_key";
-      type = "ed25519";
-    }];
+    hostKeys = [
+      {
+        path = "/etc/ssh/ssh_host_ed25519_key";
+        type = "ed25519";
+      }
+    ];
   };
 
   programs.ssh = {
