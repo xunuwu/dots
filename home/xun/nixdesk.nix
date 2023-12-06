@@ -14,7 +14,6 @@
     #./features/virtualization/virt-manager.nix
   ];
 
-  colorscheme = inputs.nix-colors.colorschemes.darkviolet;
   programs.neovim.defaultEditor = true;
 
   # |DP-3| |HDMI-1|

@@ -5,14 +5,9 @@
   config,
   outputs,
   ...
-}: let
-  inherit (inputs.nix-colors) colorSchemes;
-in {
+}: {
   imports =
-    [
-      inputs.nix-colors.homeManagerModule
-      ../features/xdg/default.nix
-    ]
+    [../features/xdg/default.nix]
     ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
@@ -43,7 +38,4 @@ in {
     stateVersion = lib.mkDefault "23.11";
     sessionPath = ["$HOME/.local/bin"];
   };
-
-  colorscheme = lib.mkDefault colorSchemes.darkviolet;
-  home.file.".colorscheme".text = config.colorscheme.slug;
 }
